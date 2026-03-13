@@ -1,50 +1,50 @@
-# Control de Accesos a Gimnasio (Práctica JavaScript)
+﻿# Control de Accesos a Gimnasio (Practica JavaScript)
 
-Proyecto académico desarrollado como práctica de programación con enfoque **por bloques funcionales** y commits incrementales.
+Proyecto academico desarrollado como practica de programacion con enfoque por bloques funcionales y commits incrementales.
 
 ## Objetivo
 
-Implementar un sistema básico de control de acceso para socios de un gimnasio en JavaScript, cumpliendo con los requisitos de la práctica:
+Implementar un sistema basico de control de acceso para socios de un gimnasio en JavaScript, cumpliendo con los requisitos de la practica:
 
-- Validación de acceso por cuota, edad y tipo de membresía.
+- Validacion de acceso por cuota, edad y tipo de membresia.
 - Resumen de accesos con bucle.
-- Cálculo recursivo de descuentos por fidelidad.
-- Clasificación de socios por cantidad de visitas.
-- Búsqueda recursiva de socio por `id`.
-- Integración final en un flujo ejecutable.
+- Calculo recursivo de descuentos por fidelidad.
+- Clasificacion de socios por cantidad de visitas.
+- Busqueda recursiva de socio por `id`.
+- Integracion final en un flujo ejecutable.
 
-## Qué se implementó
+## Que se implemento
 
 Archivo principal:
 
-- [`gym-acceso.js`](gym-acceso.js)
+- `gym-acceso.js`
 
 Funciones principales:
 
 - `evaluarAcceso(socio)`  
-  Valida si un socio puede entrar según reglas de la práctica.
+  Valida si un socio puede entrar segun reglas de la practica.
 - `evaluarTodosLosSocios(socios)`  
-  Recorre todos los socios con bucle y calcula cuántos entran / no entran.
+  Recorre todos los socios con bucle y calcula cuantos entran / no entran.
 - `calcularDescuento(visitas)`  
-  Implementa lógica recursiva para sumar 5% por cada bloque de 10 visitas con tope 30%.
+  Implementa logica recursiva para sumar 5% por cada bloque de 10 visitas con tope 30%.
 - `clasificarSocios(socios)`  
-  Función flecha que clasifica como **Nuevo**, **Frecuente** o **Elite**.
+  Funcion flecha que clasifica como Nuevo, Frecuente o Elite.
 - `buscarSocioPorId(socios, idBuscado, indice)`  
-  Búsqueda recursiva por índice.
+  Busqueda recursiva por indice.
 - `ejecutarSistema()`  
   Integra y muestra de forma ordenada los resultados de todos los bloques.
 
-## Metodología de trabajo (transparencia)
+## Metodologia de trabajo (transparencia)
 
-Este repositorio se construyó como flujo de colaboración real con un asistente de código:
+Este repositorio se construyo como flujo de colaboracion real con un asistente de codigo:
 
-- Se trabajó con **prompts orientados a tarea** (bloque por bloque), para no mezclar cambios.
-- Se revisó la lógica antes de cada cambio.
-- Se aplicó la función solicitada con sintaxis junior y estructura simple.
+- Se trabajo con prompts orientados a tarea (bloque por bloque), para no mezclar cambios.
+- Se reviso la logica antes de cada cambio.
+- Se aplico la funcion solicitada con sintaxis simple y estilo de nivel junior.
 - Se hicieron ajustes manuales cuando fue necesario para mantener consistencia en el resultado.
-- Se trabajó con enfoque de **entrega incremental** (cada bloque en su propio commit).
+- Se trabajo con enfoque de entrega incremental (cada bloque en su propio commit).
 
-Este estilo de trabajo permite demostrar razonamiento y decisiones de implementación, no solo copiar y pegar código.
+Este estilo de trabajo permite demostrar razonamiento y decisiones de implementacion, no solo copiar y pegar codigo.
 
 ## Historial por bloques (commits)
 
@@ -57,7 +57,7 @@ Se hicieron commits incrementales y se fueron subiendo al repositorio:
 5. `feat: add recursive search of socio by id`
 6. `feat: add ejecutarSistema integration flow`
 
-## Cómo probar
+## Como probar
 
 Ejecutar en terminal desde la carpeta del proyecto:
 
@@ -70,40 +70,14 @@ La salida muestra:
 - Resultado de acceso por socio (bloque 1)
 - Resumen de entrada/salida (bloque 2)
 - Ejemplo de descuentos (bloque 3)
-- Clasificación por visitas (bloque 4)
-- Búsqueda de socio por ID (bloque 5)
-- Ejecución completa integrada (bloque final)
+- Clasificacion por visitas (bloque 4)
+- Busqueda de socio por ID (bloque 5)
+- Ejecucion completa integrada (bloque final)
 
-## Front-end adicional (valor agregado)
+## Nota de autoria
 
-- `index.html`
-- `styles.css`
-- `script.js`
+Este trabajo esta pensado para evidenciar:
 
-Para verlo en navegador:
-
-1. Abrir el proyecto desde la carpeta raiz.
-2. Abrir `index.html` en el navegador.
-3. Interactuar con los botones para evaluar, revisar resumen y buscar por ID.
-
-### Despliegue en Netlify
-
-1. Entrar a Netlify y crear un nuevo sitio conectando este repositorio.
-2. Elegir rama `main`.
-3. Build command: dejar en blanco.
-4. Publish directory: `.`.
-5. Guardar y desplegar.
-
-También puede usarse Netlify CLI:
-
-```bash
-netlify deploy --dir . --prod
-```
-
-## Nota de autoría
-
-Este trabajo está pensado para evidenciar:
-
-- comprensión de las estructuras vistas en clase,
-- aplicación práctica de condicionales, bucles y recursividad,
-- y uso ético de herramientas de asistencia para acelerar el proceso sin perder el control del diseño y la calidad del código.
+- comprension de las estructuras vistas en clase,
+- aplicacion practica de condicionales, bucles y recursividad,
+- y uso etico de herramientas de asistencia para acelerar el proceso sin perder el control del diseño y la calidad del codigo.
