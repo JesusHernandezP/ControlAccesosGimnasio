@@ -74,6 +74,32 @@ La salida muestra:
 - Búsqueda de socio por ID (bloque 5)
 - Ejecución completa integrada (bloque final)
 
+## Front-end adicional (valor agregado)
+
+- `index.html`
+- `styles.css`
+- `script.js`
+
+Para verlo en navegador:
+
+1. Abrir el proyecto desde la carpeta raiz.
+2. Abrir `index.html` en el navegador.
+3. Interactuar con los botones para evaluar, revisar resumen y buscar por ID.
+
+### Despliegue en Netlify
+
+1. Entrar a Netlify y crear un nuevo sitio conectando este repositorio.
+2. Elegir rama `main`.
+3. Build command: dejar en blanco.
+4. Publish directory: `.`.
+5. Guardar y desplegar.
+
+También puede usarse Netlify CLI:
+
+```bash
+netlify deploy --dir . --prod
+```
+
 ## Nota de autoría
 
 Este trabajo está pensado para evidenciar:
@@ -81,4 +107,3 @@ Este trabajo está pensado para evidenciar:
 - comprensión de las estructuras vistas en clase,
 - aplicación práctica de condicionales, bucles y recursividad,
 - y uso ético de herramientas de asistencia para acelerar el proceso sin perder el control del diseño y la calidad del código.
-
