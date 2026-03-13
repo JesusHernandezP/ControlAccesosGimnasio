@@ -40,3 +40,27 @@ for (const socio of socios) {
   const puedeEntrar = evaluarAcceso(socio);
   console.log(`${socio.nombre}: ${puedeEntrar ? "Entrar" : "No puede entrar"}`);
 }
+
+// BLOQUE 2 — Bucle de evaluación general
+function evaluarTodosLosSocios(socios) {
+  let puedenEntrar = 0;
+  let noPuedenEntrar = 0;
+
+  for (let i = 0; i < socios.length; i++) {
+    const socio = socios[i];
+    const puedeEntrar = evaluarAcceso(socio);
+
+    if (puedeEntrar) {
+      puedenEntrar = puedenEntrar + 1;
+    } else {
+      noPuedenEntrar = noPuedenEntrar + 1;
+    }
+
+    console.log(socio.nombre + ": " + (puedeEntrar ? "Entrar" : "No puede entrar"));
+  }
+
+  console.log("Resumen de acceso: " + puedenEntrar + " pueden entrar, " + noPuedenEntrar + " no pueden entrar");
+  return { puedenEntrar, noPuedenEntrar };
+}
+
+evaluarTodosLosSocios(socios);
