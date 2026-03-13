@@ -67,17 +67,37 @@ evaluarTodosLosSocios(socios);
 
 // BLOQUE 3 — Recursividad: cálculo de descuento por fidelidad
 function calcularDescuento(visitas) {
-  // Caso base: menos de 10 visitas => 0%
+  // Menos de 10 visitas => 0%
   if (visitas < 10) {
     return 0;
   }
 
-  // Caso recursivo: restar 10 visitas y sumar 5%
+  // Restar 10 visitas y sumar 5%
   const descuento = calcularDescuento(visitas - 10) + 5;
 
-  // Limitar siempre al máximo del 30%
+  // Limitar siempre hasta 30%
   return Math.min(30, descuento);
 }
 
-// Ejemplo de uso
+// Ejemplo
 console.log("Descuento ejemplo (55 visitas): " + calcularDescuento(55) + "%");
+
+// BLOQUE 4 — Clasificación de socios con función flecha
+const clasificarSocios = (socios) => {
+  for (let i = 0; i < socios.length; i++) {
+    const socio = socios[i];
+    let categoria = "";
+
+    if (socio.visitasRealizadas < 10) {
+      categoria = "Nuevo";
+    } else if (socio.visitasRealizadas <= 40) {
+      categoria = "Frecuente";
+    } else {
+      categoria = "Elite";
+    }
+
+    console.log(socio.nombre + ": " + categoria);
+  }
+};
+
+clasificarSocios(socios);
