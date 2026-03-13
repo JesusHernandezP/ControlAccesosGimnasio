@@ -101,3 +101,19 @@ const clasificarSocios = (socios) => {
 };
 
 clasificarSocios(socios);
+
+// BLOQUE 5 — Búsqueda recursiva de socio por id
+function buscarSocioPorId(socios, idBuscado, indice = 0) {
+  if (indice >= socios.length) {
+    return null;
+  }
+
+  if (socios[indice].id === idBuscado) {
+    return socios[indice];
+  }
+
+  return buscarSocioPorId(socios, idBuscado, indice + 1);
+}
+
+console.log("Socio con id 2:");
+console.log(buscarSocioPorId(socios, 2));
