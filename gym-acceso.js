@@ -65,7 +65,7 @@ function evaluarTodosLosSocios(socios) {
 
 evaluarTodosLosSocios(socios);
 
-// BLOQUE 3 — Recursividad: cálculo de descuento por fidelidad
+// BLOQUE 3 — Recursividad: Cálculo de Bonificación por Fidelidad 
 function calcularDescuento(visitas) {
   // Menos de 10 visitas => 0%
   if (visitas < 10) {
@@ -117,3 +117,27 @@ function buscarSocioPorId(socios, idBuscado, indice = 0) {
 
 console.log("Socio con id 2:");
 console.log(buscarSocioPorId(socios, 2));
+
+// BLOQUE FINAL — Integración del sistema
+const ejecutarSistema = () => {
+  console.log("=== 1) Evaluar accesos ===");
+  const resumen = evaluarTodosLosSocios(socios);
+
+  console.log("=== 2) Resumen de accesos ===");
+  console.log("Pueden entrar: " + resumen.puedenEntrar);
+  console.log("No pueden entrar: " + resumen.noPuedenEntrar);
+
+  console.log("=== 3) Descuentos por fidelidad ===");
+  for (let i = 0; i < socios.length; i++) {
+    const socio = socios[i];
+    const descuento = calcularDescuento(socio.visitasRealizadas);
+    console.log(socio.nombre + ": " + descuento + "%");
+  }
+
+  console.log("=== 4) Búsqueda de socio ===");
+  const socioBuscado = buscarSocioPorId(socios, 2);
+  console.log(socioBuscado);
+};
+
+console.log("=== 5) Ejecutar sistema completo ===");
+ejecutarSistema();
